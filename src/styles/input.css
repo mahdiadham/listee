@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: "Inter Regular";
+        src: url("../../assets/fonts/inter/static/Inter-Regular.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Inter Semi Bold";
+        src: url("../../assets/fonts/inter/static/Inter-SemiBold.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Inter Medium";
+        src: url("../../assets/fonts/inter/static/Inter-Medium.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Inter Bold";
+        src: url("../../assets/fonts/inter/static/Inter-Bold.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Inter Extra Bold";
+        src: url("../../assets/fonts/inter/static/Inter-ExtraBold.ttf") format("truetype");
+        font-display: swap;
+    }
+}
+
+@layer components {
+    header {
+        background: url("../../assets/images/header-bg.svg") no-repeat center / cover;
+    }
+    .feedback-section {
+        background: url("../../assets/images/header-bg.svg") no-repeat center / cover;
+    }
+    .subscribe-part {
+        background: url("../../assets/images/header-bg.svg") no-repeat center / cover;
+    }
+    .subscribe-banner {
+        background: url("../../assets/images/subscribe-section-img.png") no-repeat center / cover;
+    }
+    .side-bar {
+        background: url("../../assets/images/header-bg.svg") no-repeat center / cover;
+    }
+    .nav-items {
+        @apply cursor-pointer child:text-base child:text-black child:capitalize child:rounded-full child:transition-colors child:w-20 xl:child:w-[100px] child:flex child:justify-center child:items-center child:py-3 child-hover:text-spacialPink child-hover:bg-[#FFE1E8];
+    }
+    .listing-title {
+        @apply font-interBold text-spacialBlue text-5xl;
+    }
+    .listing-description {
+        @apply text-base text-spacialGray;
+    }
+    .dropShadow {
+        filter: drop-shadow(0 5px 10px rgba(2, 13, 46, 0.04));
+    }
+    .offer-section {
+        background: url('../../assets/images/offer-bg.svg') no-repeat center / cover;
+    }
+    .flex-conf {
+        @apply flex justify-center items-center;
+    }
+    .info-card {
+        @apply flex flex-col justify-center items-center px-10 pt-[70px] pb-[60px] bg-white shadow-xl rounded-3xl;
+    }
+    .info-card h5 {
+        @apply text-xl font-interBold text-spacialBlue capitalize mt-[30px] mb-2;
+    }
+    .info-card p {
+        @apply text-base text-spacialGray text-center;
+    }
+    .feedback-box {
+        @apply bg-white rounded-2xl p-10;
+    }
+    .next-feedback-btn, .prev-feedback-btn {
+        @apply rounded-lg w-[50px] h-[50px] bg-white flex justify-center items-center;
+    }
+    .next-feedback-btn:active, .prev-feedback-btn:active {
+        transform: scale(0.9);
+    }
+    .footer-info {
+        @apply text-base text-white/70 font-interSemiBold;
+    }
+    .footer-info > span {
+        @apply font-interRegular;
+    }
+    .footer-block {
+        @apply flex flex-col justify-center items-start;
+    }
+    .footer-block > a {
+        @apply text-white/70 text-base capitalize;
+    }
+    .footer-title {
+        @apply font-interBold text-xl text-white capitalize;
+    }
+    .next, .prev {
+        @apply p-3 rounded-xl bg-spacialPink flex justify-center items-center;
+    }
+    .next:active, .prev:active {
+        transform: scale(0.95);
+    }
+    .swiper-img, .blogs img {
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: 1920px) {
+        .listing-img img, .blog-link img, .info-card, .blogs {
+            width: 390px;
+        }
+    }
+    .listing-img {
+        position: relative;
+    }
+    .listing-card-container {
+        @apply flex flex-col justify-between items-center rounded-3xl overflow-hidden shadow-md;
+    }
+    .card-subject {
+        @apply flex justify-between items-center absolute bottom-6 left-6 right-6 font-interMedium text-base;
+    }
+    .card-type {
+        @apply px-4 py-[6px] rounded-[40px] bg-spacialOrange capitalize text-white;
+    }
+    .card-rating {
+        @apply px-3 py-[6px] rounded-[30px] bg-white;
+    }
+    .card-info {
+        @apply p-6 flex flex-col justify-between items-start gap-y-2 w-full;
+    }
+    .card-title-container {
+        @apply flex justify-between items-center w-full;
+    }
+    .card-title {
+        @apply text-spacialBlue text-sm xs:text-base md:text-xl font-interBold capitalize;
+    }
+    .card-price {
+        @apply text-xl font-interMedium text-spacialPink;
+    }
+    .card-price sub {
+        @apply text-sm font-interRegular;
+    }
+    .card-location-container {
+        @apply flex justify-center items-center gap-x-1;
+    }
+    .card-location-container svg {
+        @apply text-spacialPink w-5 h-5;
+    }
+    .card-location-container span {
+        @apply text-xs sm:text-base text-spacialGray capitalize;
+    }
+    .card-phone-container {
+        @apply flex justify-center items-center gap-x-1;
+    }
+    .card-phone-container svg {
+        @apply text-spacialPink w-5 h-5;
+    }
+    .card-phone-container span {
+        @apply text-xs sm:text-base text-spacialGray;
+    }
+    .card-owner-container {
+        @apply w-full px-6 py-4 flex justify-between items-center bg-[#676C7B0D] shadow-md;
+    }
+    .card-owner-info {
+        @apply flex justify-center items-center gap-x-2;
+    }
+    .card-owner-info div {
+        @apply flex flex-col justify-between items-start gap-y-[5px];
+    }
+    .card-owner-info span:nth-child(1) {
+        @apply font-interMedium text-xs xs:text-base text-spacialBlue capitalize;
+    }
+    .card-owner-info span:nth-child(2) {
+        @apply text-spacialGray text-xs;
+    }
+    .card-link {
+        @apply text-spacialGray transition-colors hover:text-spacialPink;
+    }
+    .card-link svg {
+        @apply w-8 h-8;
+    }
+    .blogs {
+        @apply bg-white rounded-3xl shadow-xl w-[410px];
+    }
+    .loader {
+        width: 120px;
+        aspect-ratio: 1;
+        position: relative;
+    }
+
+    .loader:before,
+    .loader:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        inset: 0;
+        background:
+            radial-gradient(circle 10px, #f85c00 94%, #0000),
+            repeating-conic-gradient(from -30deg, #0000 0 60deg, #f85c00 61deg 120deg);
+        -webkit-mask: radial-gradient(circle 15px, #000 calc(100% - 6px), #0000 calc(100% - 5px) 94%, #000);
+    }
+
+    .loader:after {
+        animation: l4 1s infinite;
+        transform: perspective(300px) translateZ(0px)
+    }
+
+    @keyframes l4 {
+        to {
+            transform: perspective(300px) translateZ(150px);
+            opacity: 0
+        }
+    }
+}
